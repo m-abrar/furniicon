@@ -1,0 +1,24 @@
+/* app/product/product.module.css */
+.heading {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.productList {
+  list-style: none;
+  padding: 0;
+}
+
+.productItem {
+  margin-bottom: 15px;
+}
+
+.productLink {
+  color: #0070f3;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.productLink:hover {
+  text-decoration: underline;
+}

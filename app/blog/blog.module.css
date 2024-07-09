@@ -1,0 +1,26 @@
+/* app/blog/blog.module.css */
+.heading {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.postList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.postItem {
+  margin-bottom: 10px;
+}
+
+.postLink {
+  font-size: 1.2rem;
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.postLink:hover {
+  text-decoration: underline;
+  color: #0044cc;
+}
