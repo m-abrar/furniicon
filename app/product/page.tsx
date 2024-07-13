@@ -3,7 +3,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import styles from './product.module.css'; // Assuming you have a CSS module for blog styles
+import styles from './product.module.css';
 
 interface Product {
   id: number;
@@ -32,17 +32,25 @@ export default function ProductPage() {
   }, []);
 
   return (
-    <div>
+    <div className={styles.container}>
       <h1 className={styles.heading}>Products</h1>
-      <ul className={styles.productList}>
+      <div className={styles.productGrid}>
         {products.map(product => (
-          <li key={product.id} className={styles.productItem}>
-            <Link href={`/product/${product.id}`} className={styles.productLink}>
-              {product.title}
-            </Link>
-          </li>
+          <div key={product.id} className={styles.productCard}>
+            <img 
+              src={`https://via.placeholder.com/150?text=Product+${product.id}`} 
+              alt={product.title} 
+              className={styles.productImage}
+            />
+            <h2 className={styles.productTitle}>
+              <Link href={`/product/${product.id}`} className={styles.productLink}>
+                {product.title}
+              </Link>
+            </h2>
+            <p className={styles.productBody}>{product.body}</p>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }

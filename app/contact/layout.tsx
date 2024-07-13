@@ -1,7 +1,7 @@
-// app/about/layout.tsx
+// app/contact/layout.tsx
 import { ReactNode } from 'react';
 
-export default function AboutLayout({ children }: { children: ReactNode }) {
+export default function ContactLayout({ children }: { children: ReactNode }) {
   return (
     <div>
       <h2>Contact Section</h2>
